@@ -7,9 +7,9 @@
  http://localhost:8080/swagger-ui/index.html
 ```
 
-### Acceso DB H2
+### Access DB H2
 ```
- http://localhost:8080/h2-console/
+ http://localhost:8080/h2-console
 ```
 
 ### Credentials
@@ -22,12 +22,12 @@ Password: ``` password ```
 
 ## Docker
 
-### Crear imagen 
+### Create image 
 ```
 docker build -t "capitole_technical_test_pricing_api" .
 ```
 
-### ejecutar docker-compose 
+### Execute docker-compose 
 ```
 docker-compose up -d
 ```
