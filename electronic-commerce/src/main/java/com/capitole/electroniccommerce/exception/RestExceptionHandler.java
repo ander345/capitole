@@ -88,5 +88,15 @@ public class RestExceptionHandler {
         return new ResponseEntity<>(apiResponse, HttpStatus.BAD_REQUEST);
     }
     
-    
+    @ExceptionHandler(ArithmeticException.class)
+    public ResponseEntity<ApiResponse> handlerBadRequestExceptionMath(ArithmeticException ex) {
+    	log.warn(ex.getMessage()); 
+    	ApiResponse apiResponse = ApiResponse.builder()
+    			.messagge(ex.getMessage())
+    			.url("")
+    			.uuid("")
+    			.build();
+        
+        return new ResponseEntity<>(apiResponse, HttpStatus.BAD_REQUEST);
+    }
 }
